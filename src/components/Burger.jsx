@@ -1,157 +1,33 @@
 import React from 'react'
+import { useGetBurgersQuery } from '../redux/Store.api'
+
+import BurgerCart from './BurgerCart'
 
 const Burger = () => {
+  const { data, error, isLoading } = useGetBurgersQuery()
+
   return (
-    <div>
+    <div className="p-4">
       <h2 className="text-[60px] font-bold text-[#E59443] p-4">Burgers</h2>
       <div className="flex justify-center flex-wrap">
-        <div className="flex flex-col  justify-center transition-transform  items-center mx-5 hover:translate-y-[-3px] ">
-          <img
-            width={250}
-            height={250}
-            src="https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp"
-            alt=""
-          />
-          <h2 className="font-bold text-[20px] text-[#DD7639]">
-            Double burger
-          </h2>
-          <p className="mt-2 font-semibold text-[23px]">30$</p>
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              +
-            </p>
-            <p className="font-bold text-[#BA895C] text-[25px] ">1</p>
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              -
-            </p>
+        {error ? (
+          <div className="flex flex-col items-center">
+            <h1 className="text-[50px] text-[#E59443] align-center">
+              Oh no, servers was error, please come late
+            </h1>
+            <img width={200} height={200} src="/image/sad.png" alt="sad" />
           </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mx-5">
-          <img
-            width={250}
-            height={250}
-            src="https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp"
-            alt=""
-          />
-          <h2 className="font-bold text-[20px] text-[#DD7639]">
-            Double burger
-          </h2>
-          <p className="mt-2 font-semibold text-[23px]">30$</p>
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              +
-            </p>
-            <p className="font-bold text-[#BA895C] text-[25px] ">1</p>
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              -
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mx-5">
-          <img
-            width={250}
-            height={250}
-            src="https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp"
-            alt=""
-          />
-          <h2 className="font-bold text-[20px] text-[#DD7639]">
-            Double burger
-          </h2>
-          <p className="mt-2 font-semibold text-[23px]">30$</p>
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              +
-            </p>
-            <p className="font-bold text-[#BA895C] text-[25px] ">1</p>
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              -
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mx-5">
-          <img
-            width={250}
-            height={250}
-            src="https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp"
-            alt=""
-          />
-          <h2 className="font-bold text-[20px] text-[#DD7639]">
-            Double burger
-          </h2>
-          <p className="mt-2 font-semibold text-[23px]">30$</p>
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              +
-            </p>
-            <p className="font-bold text-[#BA895C] text-[25px] ">1</p>
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              -
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mx-5">
-          <img
-            width={250}
-            height={250}
-            src="https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp"
-            alt=""
-          />
-          <h2 className="font-bold text-[20px] text-[#DD7639]">
-            Double burger
-          </h2>
-          <p className="mt-2 font-semibold text-[23px]">30$</p>
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              +
-            </p>
-            <p className="font-bold text-[#BA895C] text-[25px] ">1</p>
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              -
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mx-5">
-          <img
-            width={250}
-            height={250}
-            src="https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp"
-            alt=""
-          />
-          <h2 className="font-bold text-[20px] text-[#DD7639]">
-            Double burger
-          </h2>
-          <p className="mt-2 font-semibold text-[23px]">30$</p>
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              +
-            </p>
-            <p className="font-bold text-[#BA895C] text-[25px] ">1</p>
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              -
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center mx-5">
-          <img
-            width={250}
-            height={250}
-            src="https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp"
-            alt=""
-          />
-          <h2 className="font-bold text-[20px] text-[#DD7639]">
-            Double burger
-          </h2>
-          <p className="mt-2 font-semibold text-[23px]">30$</p>
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              +
-            </p>
-            <p className="font-bold text-[#BA895C] text-[25px] ">1</p>
-            <p className="font-bold text-[#BA895C] text-[25px] cursor-pointer hover:text-[#673F35]">
-              -
-            </p>
-          </div>
-        </div>
+        ) : isLoading ? (
+          <>Loading...</>
+        ) : data ? (
+          data.map((item) => (
+            <BurgerCart
+              title={item.title}
+              price={item.price}
+              imageUrl={item.imageUrl}
+            />
+          ))
+        ) : null}
       </div>
     </div>
   )
