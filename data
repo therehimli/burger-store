@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "title": "DOUBLE BEEF",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/iblock/2f8/v0hwu6ig8ub2n8xm9fnw4vw4d98zl1hy.webp",
+    "price": 20,
+    "popularty": 2,
+    "Category": "Burger"
+  },
+  {
+    "id": 2,
+    "title": "WOPPER JUNIOR",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/iblock/812/812548ca6267bc794a26b3e694420ca4.webp",
+    "price": 45,
+    "popularty": 4,
+    "Category": "Burger"
+  },
+  {
+    "id": 3,
+    "title": "GAMBURGER",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/iblock/7b2/4gssmunzjrxhrb5xm058yb548rn625iu.webp",
+    "price": 12,
+    "popularty": 10,
+    "Category": "Burger"
+  },
+  {
+    "id": 4,
+    "title": "DOUBLE WOPPER",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/upload/iblock/8a7/8a7695fdd8d403563d520aaab7435422.webp",
+    "price": 60,
+    "popularty": 4,
+    "Category": "Burger"
+  },
+  {
+    "id": 5,
+    "title": "BEKONIZER",
+    "imageUrl": "https://orderapp-static.burgerkingrus.ru/x256/mobile_image/9a2f9c7f0b8514edc7666d025b07157b.webp",
+    "price": 34,
+    "popularty": 1,
+    "Category": "Burger"
+  },
+  {
+    "id": 6,
+    "title": "BURGER DONER",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/upload/iblock/76c/adada4lffqojwe0klk280f0z10p1dzu1.webp",
+    "price": 34,
+    "popularty": 2,
+    "Category": "Burger"
+  },
+  {
+    "id": 7,
+    "title": "WOPPER JUNIOR CHESEE",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/upload/iblock/747/br21kht3olo2bjx8r0ryr7gz5m75ui7n.webp",
+    "price": 50,
+    "popularty": 7,
+    "Category": "Burger"
+  },
+  {
+    "id": 8,
+    "title": "GRIL BURGER",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/iblock/f35/bpfk8uzqjlplv82vgg111lzgeapckbo3.webp",
+    "price": 45,
+    "popularty": 9,
+    "Category": "Burger"
+  },
+  {
+    "id": 9,
+    "title": "CHESEEBURGER",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/iblock/515/5vuthx4o2pb89a3gmuhgy77ibjrizm8w.webp",
+    "price": 18,
+    "popularty": 2,
+    "Category": "Burger"
+  },
+  {
+    "id": 10,
+    "title": "BIG BRO",
+    "imageUrl": "https://burger-king.by/upload/resize_cache/webp/upload/iblock/fe7/xukd9pkzl0qppbvdygtyyakbee6tb3fw.webp",
+    "price": 72,
+    "popularty": 6,
+    "Category": "Burger"
+  },
+  {
+    "id": 11,
+    "title": "Coca Cola",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/%D1%81%D1%8105.png",
+    "price": 12,
+    "popularty": 12,
+    "Category": "Soda"
+  },
+  {
+    "id": 12,
+    "title": "Fanta",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/uploads_fanta_fanta_PNG29-400x400.png",
+    "price": 12,
+    "popularty": 11,
+    "Category": "Soda"
+  },
+  {
+    "id": 13,
+    "title": "Ice Tea",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/fusetea-lemon-400x400.png",
+    "price": 18,
+    "popularty": 6,
+    "Category": "Soda"
+  },
+  {
+    "id": 14,
+    "title": "Coca Cola ZERO",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/10.-Coca-Cola-Zero-500ml-400x400.png",
+    "price": 12,
+    "popularty": 7,
+    "Category": "Soda"
+  },
+  {
+    "id": 15,
+    "title": "Ketchup",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/5-1.png",
+    "price": 5,
+    "popularty": 11,
+    "Category": "Souce"
+  },
+  {
+    "id": 16,
+    "title": "Barbekyu",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%B1%D0%B5%D0%B7-%D0%BD%D0%B0%D0%B7%D0%B2%D0%B81-3-400x400.png",
+    "price": 5,
+    "popularty": 13,
+    "Category": "Souce"
+  },
+  {
+    "id": 17,
+    "title": "Chesee",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/4-1.png",
+    "price": 5,
+    "popularty": 16,
+    "Category": "Souce"
+  },
+  {
+    "id": 18,
+    "title": "Ginger",
+    "imageUrl": "http://pizzahut.az/wp-content/uploads/2021/09/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%B1%D0%B5%D0%B7-%D0%BD%D0%B0%D0%B7%D0%B2%D0%B8-4.png",
+    "price": 5,
+    "popularty": 14,
+    "Category": "Souce"
+  },
+  {
+    "id": 19,
+    "title": "KIT KAT",
+    "imageUrl": "/image/desert/kitkat.png",
+    "price": 24,
+    "popularty": 14,
+    "Category": "Cheesecake"
+  },
+  {
+    "id": 20,
+    "title": "Black Forest",
+    "imageUrl": "/image/desert/blackforest.png",
+    "price": 30,
+    "popularty": 3,
+    "Category": "Cheesecake"
+  },
+  {
+    "id": 21,
+    "title": "Butterscotch",
+    "imageUrl": "/image/desert/butterscotch.png",
+    "price": 35,
+    "popularty": 3,
+    "Category": "Cheesecake"
+  },
+  {
+    "id": 22,
+    "title": "Chocolate",
+    "imageUrl": "/image/desert/trufle.png",
+    "price": 35,
+    "popularty": 3,
+    "Category": "Cheesecake"
+  },
+  {
+    "id": 23,
+    "title": "Fruit",
+    "imageUrl": "/image/desert/fruit.png",
+    "price": 40,
+    "popularty": 3,
+    "Category": "Cheesecake"
+  },
+  {
+    "id": 24,
+    "title": "Pineapple",
+    "imageUrl": "/image/desert/pineapple.png",
+    "price": 29,
+    "popularty": 3,
+    "Category": "Cheesecake"
+  }
+]

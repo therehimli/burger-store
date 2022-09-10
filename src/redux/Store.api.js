@@ -7,7 +7,7 @@ export const storeApi = createApi({
   }),
   endpoints: (builder) => ({
     getBurgers: builder.query({
-      query: () => 'burgers',
+      query: (items) => `burgers?filter=${items}`,
     }),
   }),
 })

@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeValue } from '../redux/Slices/inputValue'
 
 const Header = () => {
+  const dispatch = useDispatch()
+  const value = useSelector((state) => state.ChangeInput.inputValue)
   return (
     <div className="flex items-center justify-between p-10">
       <Link to="/">
@@ -16,11 +20,14 @@ const Header = () => {
           alt="search"
         />
         <input
+          value={value}
+          onChange={(e) => dispatch(changeValue(e.target.value))}
           className="bg-transparent outline-none ml-1 w-[250px] h-[35px] "
           type="text"
           placeholder="Search burger..."
         />
         <img
+          onClick={() => dispatch(changeValue(''))}
           className="cursor-pointer pl-2"
           width={20}
           height={20}
