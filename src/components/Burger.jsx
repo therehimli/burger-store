@@ -1,15 +1,18 @@
 import React from 'react'
-import { useGetBurgersQuery } from '../redux/Store.api'
+import { useGetBurgersQuery } from '../redux/Product.api'
 import BurgerCart from './BurgerCart'
 import { useSelector } from 'react-redux'
 
 const Burger = () => {
   const sortItems = useSelector((state) => state.SortingSlice.items)
   const sortItemName = useSelector((state) => state.SortingSlice.itemsName)
-  const value = useSelector((state) => state.ChangeInput.inputValue)
-  const { data, error, isLoading } = useGetBurgersQuery(
-    value ? value : sortItems
-  )
+  const search = useSelector((state) => state.ChangeInput.inputValue)
+  const page = useSelector((state) => state.changePage.page)
+
+  const { data, error, isLoading } = useGetBurgersQuery({
+    sortItems,
+    page,
+  })
   return (
     <div className="p-4">
       <h2 className="text-[60px] font-bold text-[#E59443] p-4">
@@ -26,14 +29,21 @@ const Burger = () => {
         ) : isLoading ? (
           <>Loading...</>
         ) : data ? (
-          data.map((item) => (
-            <BurgerCart
-              key={item.id}
-              title={item.title}
-              price={item.price}
-              imageUrl={item.imageUrl}
-            />
-          ))
+          data
+            .filter((product) => {
+              if (product.title.toLowerCase().includes(search.toLowerCase())) {
+                return true
+              }
+              return false
+            })
+            .map((item) => (
+              <BurgerCart
+                key={item.id}
+                title={item.title}
+                price={item.price}
+                imageUrl={item.imageUrl}
+              />
+            ))
         ) : null}
       </div>
     </div>
