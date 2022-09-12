@@ -6,8 +6,7 @@ const initialState = {
   items: '',
   itemsName: 'Burgers',
 }
-
-export const sortSlice = createSlice({
+const sortSlice = createSlice({
   name: 'sort',
   initialState,
   reducers: {

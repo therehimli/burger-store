@@ -4,7 +4,7 @@ const initialState = {
   inputValue: '',
 }
 
-export const ChangeInput = createSlice({
+const ChangeInput = createSlice({
   name: 'input',
   initialState,
   reducers: {
