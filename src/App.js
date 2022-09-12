@@ -1,6 +1,8 @@
 import Header from './components/Header'
 import Cart from './pages/Cart'
 import Home from './pages/Home'
+import Pay from './pages/Pay'
+
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/pay" element={<Pay />} />
+        <Route path="*" element={<Cart />} />
       </Routes>
     </div>
   )

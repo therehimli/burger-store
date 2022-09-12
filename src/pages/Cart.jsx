@@ -71,7 +71,7 @@ const Cart = () => {
           </h2>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-start gap-4">
+      <div className="flex flex-col justify-center items-center gap-4">
         {allPrice ? (
           items.map((item) => <CartProducts {...item} key={item.id} />)
         ) : (
@@ -83,6 +83,7 @@ const Cart = () => {
           </div>
         )}
       </div>
+
       <div className="flex justify-between items-center gap-80">
         <h2 className="text-[25px] font-semibold">
           Product count: <span>{totalItemCart}</span>
@@ -92,19 +93,24 @@ const Cart = () => {
         </h2>
       </div>
 
-      <div className="flex justify-between items-center gap-80 pb-4">
+      <div className="flex justify-between items-center gap-80 pb-4 ">
         <Link
           className="text-[20px] px-5 py-2 bg-[#EF8B4C] rounded-2xl font-bold"
           to="/"
         >
           <h2>Main page</h2>
         </Link>{' '}
-        <Link
-          className="text-[20px] px-5 py-2 bg-[#EF8B4C] rounded-2xl font-bold"
-          to="/"
-        >
-          <h2>Pay</h2>
-        </Link>
+        {allPrice ? (
+          <Link
+            to="/pay"
+            onClick={() => dispatch(clearItem())}
+            className="text-[20px] px-5 py-2 bg-[#EF8B4C] rounded-2xl font-bold"
+          >
+            Pay
+          </Link>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   )
