@@ -12,4 +12,4 @@ export const storeApi = createApi({
     }),
   }),
 })
-export const { useGetBurgersQuery } = storeApi
+export const { useGetBurgersQuery, useAddProductMutation } = storeApi

@@ -21,8 +21,9 @@ const Pagination = () => {
         {'<'}
       </button>
 
-      {pagList.map((num) => (
+      {pagList.map((num, i) => (
         <p
+          key={i}
           onClick={() => dispatch(onPagination(num))}
           className={`text-[20px] cursor-pointer px-3 py-[1px]  rounded-full ${
             num === page ? ` bg-[#EF8B4C]  text-white` : ``

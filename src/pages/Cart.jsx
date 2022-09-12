@@ -1,16 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartProducts from '../components/CartProducts'
-
+import { useSelector, useDispatch } from 'react-redux'
+import { clearItem } from '../redux/Slices/cartSlice'
 const Cart = () => {
+  const dispatch = useDispatch()
+
+  const { items, allPrice } = useSelector((state) => state.addCart)
+
+  const totalItemCart = items.reduce((sum, item) => {
+    return item.count + sum
+  }, 0)
+
+  function onClearItem() {
+    if (window.confirm('Do you really want clear cart?')) {
+      dispatch(clearItem())
+    }
+  }
+
   return (
     <div className="flex flex-col justify-center items-center gap-10">
       <div className="flex justify-between items-center gap-80">
-        <div className="flex items-center">
+        <div className="flex items-center mr-10">
           <img width={80} height={80} src="/image/cart.png" alt="cart" />
           <h1 className="font-bold text-[50px] ">Cart</h1>
         </div>
-        <div className="flex items-center gap-2   cursor-pointer ">
+        <div className="flex items-center gap-2   cursor-pointer ml-10">
           <svg
             className=""
             width="20px"
@@ -48,31 +63,45 @@ const Cart = () => {
               stroke-linejoin="round"
             />
           </svg>
-          <h2 className=" text-[20px] text-[#c2c2c2] hover:text-black">
+          <h2
+            onClick={() => onClearItem()}
+            className=" text-[20px] text-[#c2c2c2] hover:text-black"
+          >
             Clear cart
           </h2>
         </div>
       </div>
-      <CartProducts />
-      <CartProducts />
+      <div className="flex flex-col justify-center items-start gap-4">
+        {allPrice ? (
+          items.map((item) => <CartProducts {...item} key={item.id} />)
+        ) : (
+          <div className="flex flex-col justify-center items-center">
+            <h1 className=" font-bold text-[35px] text-[#E59443]">
+              Cart empty
+            </h1>
+            <p>Please add something to cart!</p>
+          </div>
+        )}
+      </div>
       <div className="flex justify-between items-center gap-80">
         <h2 className="text-[25px] font-semibold">
-          Product count: <span>1</span>
+          Product count: <span>{totalItemCart}</span>
         </h2>
         <h2 className="text-[25px] font-semibold">
-          Price <span>64$</span>
+          Total price: <span>{allPrice}$</span>
         </h2>
       </div>
+
       <div className="flex justify-between items-center gap-80 pb-4">
         <Link
           className="text-[20px] px-5 py-2 bg-[#EF8B4C] rounded-2xl font-bold"
           to="/"
         >
           <h2>Main page</h2>
-        </Link>
+        </Link>{' '}
         <Link
           className="text-[20px] px-5 py-2 bg-[#EF8B4C] rounded-2xl font-bold"
-          to="/pay"
+          to="/"
         >
           <h2>Pay</h2>
         </Link>
