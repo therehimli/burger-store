@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/burger-store/static/css/main.24d0ab25.css",
+    "main.js": "/burger-store/static/js/main.5ca8a305.js",
+    "index.html": "/burger-store/index.html",
+    "main.24d0ab25.css.map": "/burger-store/static/css/main.24d0ab25.css.map",
+    "main.5ca8a305.js.map": "/burger-store/static/js/main.5ca8a305.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24d0ab25.css",
+    "static/js/main.5ca8a305.js"
+  ]
+}
